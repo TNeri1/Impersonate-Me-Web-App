@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
+from PIL import Image
 
 # Create your views here.
 
@@ -20,5 +21,8 @@ def video_upload(request):
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
+        print(f"poop {uploaded_file_url}")
+        image = Image.open(uploaded_file_url)
+        resized_image = image.resize((512, 512))
         return render(request, 'main/video_upload.html', {'uploaded_file_url': uploaded_file_url})
     return render(request, 'main/video_upload.html')
