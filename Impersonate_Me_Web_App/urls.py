@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings #add this
 from django.conf.urls.static import static #add this
+from video_content.views import upload_video,display
 
 # Keep in mind it only works when DEBUG is set to
 #  True and the URL specified in the settings is 
@@ -24,4 +25,9 @@ from django.conf.urls.static import static #add this
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("main.urls")),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('upload/',upload_video,name='upload'),
+    path('videos/',display,name='videos'),
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.MEDIA_ROOT)

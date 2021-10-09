@@ -12,3 +12,16 @@ def index(response):
         file_url = fss.url(file)
         return render(response, 'main/upload.html', {'file_url': file_url})
     return render(response, 'main/upload.html')
+
+def video(request):
+
+    if request.method == 'POST':
+
+        title = request.POST['title']
+        video = request.POST['video']
+
+        content = Videos(title=title,video=video)
+        content.save()
+        return redirect('home')
+
+    return render(request,'upload.html')
