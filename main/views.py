@@ -5,10 +5,6 @@ from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
 def index(response):
-    # return HttpResponse("Hello, World")
-    return render(response, "main/base.html", {})
-
-def upload(response):
     if response.method == 'POST' and response.FILES['upload']:
         upload = response.FILES['upload']
         fss = FileSystemStorage()
