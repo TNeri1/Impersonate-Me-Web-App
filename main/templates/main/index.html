@@ -57,6 +57,11 @@
             padding: 20;
         }
         
+        .logo-container {
+            padding: 0;
+            margin: 0;
+        }
+        
         @-webkit-keyframes Gradient {
             0% {
                 background-position: 0% 50%
@@ -91,6 +96,14 @@
             100% {
                 background-position: 0% 50%
             }
+        }
+        
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20%;
+            padding: 10px;
         }
         
         button {
@@ -142,8 +155,8 @@
             }
             .mt-3 {
                 font-family: 'Raleway', sans-serif;
-                top: 120px;
-                font-size: 5px;
+                top: 5px;
+                font-size: 120px;
             }
         }
     </style>
@@ -151,6 +164,9 @@
 </head>
 
 <body>
+    <div class="logo-container">
+        <img class="logo" src="images/logo5.png" alt="logo">
+    </div>
     <div class="welcome">
         <h2 class="mt-2">Welcome to </h2>
         <h1 class="mt-3">IMPERSONATE ME</h1>
@@ -158,10 +174,7 @@
             The algorithm will do its magic and create a video of your chosen person/victim doing whatever activity of the video!</p>
     </div>
 
-    <div id="content" , name="conect" class="main">
 
-        {% block content %} {% endblock %}
-    </div>
 </body>
 
 </html>
