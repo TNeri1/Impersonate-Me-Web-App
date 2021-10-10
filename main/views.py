@@ -10,5 +10,5 @@ def index(response):
         fss = FileSystemStorage()
         file = fss.save(upload.name, upload)
         file_url = fss.url(file)
-        return render(response, 'main/upload.html', {'file_url': file_url})
-    return render(response, 'main/upload.html')
+        return render(response, 'main/index.html', {'file_url': file_url})
+    return render(response, 'main/index.html')

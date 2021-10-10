@@ -66,17 +66,19 @@
         p {
             font-family: 'Raleway', sans-serif;
             background-color: rgba(255, 255, 255, 0.253);
-            padding: 20;
+            padding: 20px;
+            margin: 20px;
         }
         
         .my-4 {
             font-family: 'Montserrat', sans-serif;
-            color: black;
+            color: white;
             position: relative;
             font-size: 25px;
             text-align: center;
             padding: 0;
             margin: 0;
+            text-shadow: 1px 1px 1px rgb(0, 0, 0);
         }
         
         .btn {
@@ -101,50 +103,22 @@
         /*small tablet styles*/
         
         @media screen and (min-width: 620px) {
-            .mt-2 {
-                top: 1.2em;
-                font-size: 30px;
-                padding: 5px;
-            }
-            .mt-3 {
-                font-family: 'Raleway', sans-serif;
-                top: 10px;
-                font-size: 60px;
-            }
-            .logo {
-                width: 30%;
+            .my-4 {
+                font-size: 40px;
             }
         }
         /*larger tables & laptops*/
         
         @media screen and (min-width:620) {
-            .mt-2 {
-                top: 1.2em;
-                font-size: 40px;
-                padding: 5px;
-                top: 15px;
-            }
-            .mt-3 {
-                font-family: 'Raleway', sans-serif;
-                font-size: 70px;
-                padding: 15px;
-            }
-            .logo {
-                width: 25%;
+            .my-4 {
+                font-size: 60px;
             }
         }
         /*desktop style*/
         
         @media screen and (min-width: 1200px) {
-            .mt-2 {
-                font-size: 50px;
-            }
-            .mt-3 {
-                top: 5px;
-                font-size: 80px;
-            }
-            .logo {
-                width: 20%;
+            .my-4 {
+                font-size: 70px;
             }
         }
     </style>
@@ -153,7 +127,7 @@
 
 <body>
     <div>
-        <h2 class="my-4"></h2>
+        <h2 class="my-4">Let's get started</h2>
         <p>Impersonate Me is a web application that seeks to entertain and uplift everyone's spirits using machine learning algorithms! We will superimpose the picture of the person you uploaded over the default video(or you can provide a video of your own)!
             The algorithm will do its magic and create a video of your chosen person/victim doing whatever activity of the video!</p>
 
