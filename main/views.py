@@ -21,7 +21,10 @@ def index(response):
     return render(response, 'main/index.html')
 
 def base(response):
-    return render(response, 'main/base.html')
+    return render(response, 'main/upload.html')
+
+def show_video(response):
+    return render(response, "main/show_video.html") 
 
 def video_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
