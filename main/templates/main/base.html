@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Impersonate Me</title>
+    <style>
+        body,
+        p,
+        a {
+            margin: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            text-decoration: none;
+        }
+        
+        body {
+            color: #fff;
+            background: linear-gradient(-45deg, #EE7752, rgb(255, 67, 98), #23A6D5, #23D5AB);
+            background-size: 700% 700%;
+            -webkit-animation: Gradient 15s ease infinite;
+            -moz-animation: Gradient 15s ease infinite;
+            animation: Gradient 15s ease infinite;
+        }
+        
+        @-webkit-keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+        
+        @-moz-keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+        
+        @keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+        
+        p {
+            font-family: 'Raleway', sans-serif;
+            background-color: rgba(255, 255, 255, 0.253);
+            padding: 20;
+        }
+        
+        .my-4 {
+            font-family: 'Montserrat', sans-serif;
+            color: black;
+            position: relative;
+            font-size: 25px;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            background: none;
+            border: 3px solid white;
+            color: white;
+            padding: 6px 12px;
+            text-transform: uppercase;
+            box-shadow: 1px 2px 3px rgb(0, 0, 0, 0.6);
+            letter-spacing: 3px;
+            transition: all .2s ease-in-out;
+        }
+        
+        .btn:hover {
+            background: white;
+            border: 1px solid white;
+            color: #000000;
+            border-radius: 30px;
+        }
+        /*small tablet styles*/
+        
+        @media screen and (min-width: 620px) {
+            .mt-2 {
+                top: 1.2em;
+                font-size: 30px;
+                padding: 5px;
+            }
+            .mt-3 {
+                font-family: 'Raleway', sans-serif;
+                top: 10px;
+                font-size: 60px;
+            }
+            .logo {
+                width: 30%;
+            }
+        }
+        /*larger tables & laptops*/
+        
+        @media screen and (min-width:620) {
+            .mt-2 {
+                top: 1.2em;
+                font-size: 40px;
+                padding: 5px;
+                top: 15px;
+            }
+            .mt-3 {
+                font-family: 'Raleway', sans-serif;
+                font-size: 70px;
+                padding: 15px;
+            }
+            .logo {
+                width: 25%;
+            }
+        }
+        /*desktop style*/
+        
+        @media screen and (min-width: 1200px) {
+            .mt-2 {
+                font-size: 50px;
+            }
+            .mt-3 {
+                top: 5px;
+                font-size: 80px;
+            }
+            .logo {
+                width: 20%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <h2 class="my-4"></h2>
+        <p>Impersonate Me is a web application that seeks to entertain and uplift everyone's spirits using machine learning algorithms! We will superimpose the picture of the person you uploaded over the default video(or you can provide a video of your own)!
+            The algorithm will do its magic and create a video of your chosen person/victim doing whatever activity of the video!</p>
+
+    </div>
+    <div class="welcome">
+        <div id="content" , name="conect" class="main">
+            {% block content %} {% endblock %}
+        </div>
+</body>
+
+</html>
