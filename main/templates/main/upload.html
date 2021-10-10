@@ -5,7 +5,8 @@
 
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="file" name="upload" accept="image/*">
+        <label class="custom-file-upload" for="fileUpload">Upload your files here: </label>
+        <input class="custom-file-input" type="file" name="upload" accept="image/*">
         <br>
         <br>
         <br>
