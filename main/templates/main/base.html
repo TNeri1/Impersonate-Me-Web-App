@@ -65,7 +65,6 @@
         
         p {
             font-family: 'Raleway', sans-serif;
-            background-color: rgba(255, 255, 255, 0.253);
             padding: 20px;
             margin: 20px;
         }
@@ -100,11 +99,41 @@
             color: #000000;
             border-radius: 30px;
         }
+        
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        
+        .grid-icons {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            justify-items: center;
+            align-items: end;
+        }
+        
+        .icon {
+            height: 150px;
+            width: auto;
+            margin-top: 50px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
         /*small tablet styles*/
         
         @media screen and (min-width: 620px) {
             .my-4 {
                 font-size: 40px;
+            }
+            .grid-icons {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 8px;
+                justify-items: center;
+                align-items: end;
             }
         }
         /*larger tables & laptops*/
@@ -113,12 +142,20 @@
             .my-4 {
                 font-size: 60px;
             }
+            .grid-icons {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
         }
         /*desktop style*/
         
         @media screen and (min-width: 1200px) {
             .my-4 {
                 font-size: 70px;
+            }
+            .grid-icons {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
             }
         }
     </style>
@@ -128,21 +165,37 @@
 <body>
     <div>
         <h2 class="my-4">Let's get started</h2>
-        <p>Impersonate Me is a web application that seeks to entertain and uplift everyone's spirits using machine learning algorithms! We will superimpose the picture of the person you uploaded over the default video(or you can provide a video of your own)!
-            The algorithm will do its magic and create a video of your chosen person/victim doing whatever activity of the video!</p>
-
     </div>
 
-    <div class="flex-container">
-        <div class="flex-item-left"></div>
-        <div class="flex-item-right">2</div>
+    <div class="grid-icons">
+        <div class="first">
+            <img class='icon' src="images/quantum-computing.png" alt="computer">
+            <p class="block">
+                Impersonate Me is a web application that seeks to entertain and uplift everyone's spirits using machine learning algorithms!
+            </p>
+        </div>
+        <div class="second">
+            <img class='icon' src="images/photo.png" alt="computer">
+            <p class="block">
+                We will superimpose the picture of the person you uploaded over the default video(or you can provide a video of your own)!
+            </p>
+        </div>
+        <div class="second">
+            <img class='icon' src="images/streaming.png" alt="computer">
+            <p class="block">
+                The algorithm will do its magic and create a video of your chosen person/victim doing whatever activity of the video!</p>
+        </div>
     </div>
-    <div class="flex-container2">
-        <div class="flex-item-left">1</div>
-        <div class="flex-item-right">2</div>
+
+    <div>
+        <p ">Upload your files here:<p>
     </div>
-    <div class="welcome">
-        <div id="content" , name="conect" class="main">
+
+
+
+
+    <div class="center ">
+        <div id="content " , name="conect " class="main ">
             {% block content %} {% endblock %}
         </div>
 </body>
