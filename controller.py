@@ -29,7 +29,7 @@ assets_dir = "/assets"
 # the output directory.
 output_dir = "./media/products"
 
-work_asserts_dir = os.path.join("./media")
+work_asserts_dir = os.path.join("./assets")
 if not os.path.exists(work_asserts_dir):
     os.symlink(osp.abspath(assets_dir), osp.abspath(work_asserts_dir),
             target_is_directory=(platform.system() == "Windows"))
