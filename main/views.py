@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.files.storage import FileSystemStorage
+from PIL import Image
 
 # Create your views here.
 
@@ -10,7 +11,13 @@ def index(response):
         fss = FileSystemStorage()
         file = fss.save(upload.name, upload)
         file_url = fss.url(file)
-        return render(response, 'main/index.html', {'file_url': file_url})
+        try: 
+            img = Image.open('.'+file_url) 
+        except IOError:
+            pass
+        img = img.resize((512, 512))
+        img.save('./media/newphoto.jpg', 'JPEG')
+        return render(response, 'main/index.html', {'file_url': './media/newphoto.jpg'})
     return render(response, 'main/index.html')
 
 def video_upload(request):
