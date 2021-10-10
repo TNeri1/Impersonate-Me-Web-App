@@ -20,6 +20,12 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -29,7 +35,9 @@ SECRET_KEY = 'django-insecure-q!j+%#nuu#ii&&j9r5hdxzfl**^n7cphvgs%3u8g&-o_t592=t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["colab.research.google.com", 
+                 "localhost", 
+                 "127.0.0.1"]
 
 
 # Application definition
