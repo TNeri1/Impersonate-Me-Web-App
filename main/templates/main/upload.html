@@ -2,10 +2,8 @@
 
 <div class="container">
     <!--Simple Form-->
-
-    <form method="post" enctype="multipart/form-data">
+        <form method ="POST" enctype="multipart/form-data">
         {% csrf_token %}
-
         <div>
             <img class="upload" src="https://cdn-icons-png.flaticon.com/512/1251/1251309.png" alt="upload" width=50%>
             <br>
@@ -15,19 +13,19 @@
         <br>
         <br>
         <br>
-        <div calss="upload">
-            <input class="custom-file-input" type="file" name="upload" accept="image/*"><a href="{% url 'showvideo' %}" class="btn btn-dark ">Submit</a>
+        <div>
+            <input class="custom-file-input" type="file" name="upload" accept="image/*">
+            <button href="{% url 'showvideo' %}" class="btn btn-dark type="submit">Submit</button>
 
 
         </div>
+        </form>                                                                 
 </div>
-
-</form>
 
 <!-- The code below is if you want to view the image you submitted -->
 
-<!-- 
-          <h2 class="my-4">Movie Poster</h2>
+
+          <!-- <h2 class="my-4">Movie Poster</h2>
           <div class="row">
             {% if file_url %}
             <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
@@ -39,7 +37,7 @@
             {% endif %}
           </div> -->
 
-</div>
+<!-- </div> -->
 
 
 {% endblock %}
