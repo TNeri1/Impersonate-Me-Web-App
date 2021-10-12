@@ -5,13 +5,15 @@
 
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <input type="file" name="upload" accept="image/*">
+        <label class="custom-file-upload" for="fileUpload" style="font-family:'Montserrat' sans-serif;">Upload your picture here: </label>
+        <input class="custom-file-input" type="file" name="upload" accept="image/*">
         <br>
         <br>
         <br>
         <button href="{% url 'showvideo' %}" class="btn btn-dark " type="submit">Submit</button>
-        
-        <a href="{% url 'showvideo' %}" class="btn6">Get Started</a></a></div>
+
+        <a href="{% url 'showvideo' %}" class="btn6">Get Started</a></a>
+</div>
 
 </form>
 
