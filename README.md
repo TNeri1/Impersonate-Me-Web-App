@@ -10,6 +10,9 @@ The algorithm will do its magic and create a video of your chosen person/victim 
 Colab Link 
 - https://colab.research.google.com/drive/1_0OyrxIm6BPP7hnhMcqwvSVEM0GIJQHH?authuser=2#scrollTo=FNv_l-WF6cgV
 
+YouTube Video:
+- https://www.youtube.com/watch?v=IO8314pSv5o
+
 ### Development Environment
 
 * Google Colab
