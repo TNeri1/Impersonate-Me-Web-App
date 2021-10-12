@@ -5,14 +5,21 @@
 
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <label class="custom-file-upload" for="fileUpload" style="font-family:'Montserrat' sans-serif;">Upload your picture here: </label>
-        <input class="custom-file-input" type="file" name="upload" accept="image/*">
-        <br>
-        <br>
-        <br>
-        <button href="{% url 'showvideo' %}" class="btn btn-dark " type="submit">Submit</button>
 
-        <a href="{% url 'showvideo' %}" class="btn6">Get Started</a></a>
+        <div>
+            <img class="uploadimg" src="https://cdn-icons-png.flaticon.com/512/1251/1251309.png" alt="upload" width=50%>
+            <br>
+            <br>
+            <h2 class="my-4">Upload your picture</h2>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div calss="upload">
+            <input class="custom-file-input" type="file" name="upload" accept="image/*"><a href="{% url 'showvideo' %}" class="btn btn-dark ">Submit</a>
+
+
+        </div>
 </div>
 
 </form>
