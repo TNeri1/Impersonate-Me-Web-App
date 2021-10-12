@@ -16,15 +16,15 @@ def index(response):
         except IOError:
             pass
         img = img.resize((512, 512))
-        img.save('./media/newphoto.jpg', 'JPEG')
+        img.save('/media/newphoto.jpg', 'JPEG')
         return render(response, 'main/index.html', {'file_url': './media/newphoto.jpg'})
     return render(response, 'main/index.html')
 
 def base(response):
     return render(response, 'main/upload.html')
 
-def show_video(response):
-    return render(response, "main/show_video.html") 
+def showvideo(response):
+    return render(response, "main/showvideo.html") 
 
 def video_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
@@ -34,3 +34,4 @@ def video_upload(request):
         uploaded_file_url = fs.url(filename)
         return render(request, 'main/video_upload.html', {'uploaded_file_url': uploaded_file_url})
     return render(request, 'main/video_upload.html')
+
