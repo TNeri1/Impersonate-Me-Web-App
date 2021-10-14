@@ -16,7 +16,7 @@ YouTube Video:
 ### Development Environment
 
 * Google Colab 
-  * (To use as a temporary Web Server with GPU capabilities for running the Generative Adversarial Network)
+  * (To use as a temporary Web Server with GPU capabilities for hosting Django Web App with an embedded running Generative Adversarial Network)
 * Python
 * Django
 * Impersonator++
