@@ -15,17 +15,15 @@ YouTube Video:
 
 ### Development Environment
 
-* Google Colab
+* Google Colab (To use as a temporary Web Server with GPU capabilities for running the Generative Adversarial Network)
 * Python
 * Django
 * Impersonator++
 
 ### Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [Impersonator++](https://github.com/iPERDance/iPERCore)
 
 ### Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
 * Add real time functionality
